@@ -1,0 +1,91 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.043 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.117 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\VR_Project_Git\SDHS_VR_GAME\SDHS_VR_Data\Managed\System.dll (this message is harmless)
+Setting up 8 worker threads for Enlighten.
+  Thread -> id: 1768 -> priority: 1 
+  Thread -> id: 1888 -> priority: 1 
+  Thread -> id: 1d40 -> priority: 1 
+  Thread -> id: 17a4 -> priority: 1 
+  Thread -> id: 1dec -> priority: 1 
+  Thread -> id: a80 -> priority: 1 
+  Thread -> id: d4 -> priority: 1 
+  Thread -> id: 1858 -> priority: 1 
+Setting up 8 worker threads for Enlighten.
+  Thread -> id: 12b4 -> priority: 1 
+  Thread -> id: c7c -> priority: 1 
+  Thread -> id: 13f4 -> priority: 1 
+  Thread -> id: 1c0c -> priority: 1 
+  Thread -> id: 1cb0 -> priority: 1 
+  Thread -> id: 1ff4 -> priority: 1 
+  Thread -> id: 1d1c -> priority: 1 
+  Thread -> id: 1c08 -> priority: 1 
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Control () [0x00000] in <filename unknown>:0 
+  at OVRPlayerController.OnUpdate () [0x00000] in <filename unknown>:0 
+  at objectBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Control () [0x00000] in <filename unknown>:0 
+  at OVRPlayerController.OnUpdate () [0x00000] in <filename unknown>:0 
+  at objectBase.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Monster_Item.OnTriggerEnter (UnityEngine.Collider col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+

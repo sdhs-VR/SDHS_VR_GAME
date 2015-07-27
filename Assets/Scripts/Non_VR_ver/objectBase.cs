@@ -15,6 +15,8 @@ public class objectBase : MonoBehaviour
     void OnTriggerEnter( Collider pCollider ) { OnObjectTriggerEnter( pCollider ); }
     void OnTriggerExit( Collider pCollider ) { OnObjectTriggerExit( pCollider ); }
 
+    void OnControllerColliderHit( ControllerColliderHit pHit ) { OnCharacterColliderHit( pHit ); }
+
     protected virtual void OnAwake() { }
     protected virtual void OnStart() { }
     protected virtual void _OnEnable() { }
@@ -27,4 +29,6 @@ public class objectBase : MonoBehaviour
 
     protected virtual void OnObjectTriggerEnter( Collider pCollider ) { }
     protected virtual void OnObjectTriggerExit( Collider pCollider ) { }
+
+    protected virtual void OnCharacterColliderHit( ControllerColliderHit pHit ) { }
 }

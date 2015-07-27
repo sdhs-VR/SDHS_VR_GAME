@@ -1,0 +1,17 @@
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.dll
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.xml
+D:\VR_Project_Git\SDHS_VR_GAME\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+D:\VR_Project_Git\SDHS_VR_GAME\obj\Debug\UnityVS.SDHS_VR_GAME.CSharp.csprojResolveAssemblyReference.cache
+D:\VR_Project_Git\SDHS_VR_GAME\obj\Debug\Assembly-CSharp.dll
+D:\VR_Project_Git\SDHS_VR_GAME\obj\Debug\Assembly-CSharp.pdb

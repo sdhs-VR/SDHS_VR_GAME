@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Non_VR_ver\Monster\Monster_Move.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Non_VR_ver\Monster\Monster_Item.cs" Line="29" Column="77" />
+      <File FileName="Assets\Scripts\Non_VR_ver\Monster\Monster_Move.cs" Line="31" Column="30" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
