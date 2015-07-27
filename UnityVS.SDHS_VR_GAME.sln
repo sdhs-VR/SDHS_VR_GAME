@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.SDHS_VR_GAME.CSharp.Plugins", "UnityVS.SDHS_VR_GAME.CSharp.Plugins.csproj", "{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.SDHS_VR_GAME.CSharp", "UnityVS.SDHS_VR_GAME.CSharp.csproj", "{193730DA-DB58-A2D2-81E8-714A74844E79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.SDHS_VR_GAME.CSharp.Editor", "UnityVS.SDHS_VR_GAME.CSharp.Editor.csproj", "{38AF83CE-177A-2242-C549-74D6BA4B254F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.SDHS_VR_GAME.CSharp.Plugins", "UnityVS.SDHS_VR_GAME.CSharp.Plugins.csproj", "{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Release|Any CPU.Build.0 = Release|Any CPU
 		{193730DA-DB58-A2D2-81E8-714A74844E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{193730DA-DB58-A2D2-81E8-714A74844E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{193730DA-DB58-A2D2-81E8-714A74844E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -21,10 +25,6 @@ Global
 		{38AF83CE-177A-2242-C549-74D6BA4B254F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38AF83CE-177A-2242-C549-74D6BA4B254F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38AF83CE-177A-2242-C549-74D6BA4B254F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AD77459-E0CA-6F25-9BE4-77B5AFCF3088}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
