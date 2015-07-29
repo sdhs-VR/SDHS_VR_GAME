@@ -10,8 +10,6 @@ public class PlayerMove : objectBase // 모든 오브젝트들은 objectBase를 
 
     private GameObject m_goCamera = null;
 
-	private Vector3 velocity;
-
     // 초기화에는 OnAwake, OnStart 사용
     protected override void OnAwake()
     {

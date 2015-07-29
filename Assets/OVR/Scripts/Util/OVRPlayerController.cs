@@ -20,7 +20,9 @@ limitations under the License.
 ************************************************************************************/
 
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 /// <summary>
 /// Controls the player's movement in virtual reality.
@@ -112,10 +114,29 @@ public class OVRPlayerController : objectBase
     private float m_StepInterval;
     [SerializeField]
     private AudioClip[] m_FootstepSounds;
+    [SerializeField]
+    private AudioClip[] m_DeadSounds;
+    [SerializeField]
+    private Image m_DeadFade;
+    [SerializeField]
+    private RectTransform rtLockDoor;
 
     private float m_StepCycle;
     private float m_NextStep;
     private AudioSource m_AudioSource;
+    private float m_fDeadCount = 0.0f;
+    private int m_iDeadSoundIndex = 0;
+
+    private bool isLockDoor = false;
+    private float m_LockUICount = 0.0f;
+    private bool m_isPlayerDead = false;
+    private bool m_isClear = false;
+
+    public bool LockDoor
+    {
+        get { return isLockDoor; }
+        set { isLockDoor = value; }
+    }
 
     private void ProgressStepCycle( float speed )
     {
@@ -151,6 +172,24 @@ public class OVRPlayerController : objectBase
         m_FootstepSounds[ 0 ] = m_AudioSource.clip;
     }
 
+    private void LockUIProcess()
+    {
+        if ( isLockDoor )
+        {
+            rtLockDoor.localScale = Vector3.Slerp( rtLockDoor.localScale, new Vector3( 0.1f, 0.07f, 0.1f ), 10f * Time.deltaTime );
+            m_LockUICount += Time.deltaTime;
+            if ( m_LockUICount >= 2.0f )
+            {
+                m_LockUICount = 0.0f;
+                isLockDoor = false;
+            }
+        }
+        else
+        {
+            rtLockDoor.localScale = Vector3.Slerp( rtLockDoor.localScale, new Vector3( 0, 0, 0 ), 10f * Time.deltaTime );
+        }
+    }
+
 
     protected override void OnCharacterColliderHit( ControllerColliderHit pHit )
     {
@@ -159,8 +198,26 @@ public class OVRPlayerController : objectBase
         if ( pHit.collider.tag == "Enemy" )
         {
             // Game Over
-            Application.Quit();
+            // Next Scene
+            //Application.Quit();
+            m_AudioSource.PlayOneShot( m_DeadSounds[ 0 ] );
+            StartCoroutine( DeadProc( m_DeadSounds[ 0 ].length ) );
+            m_isPlayerDead = true;
+            m_DeadFade.color = new Color( 255, 255, 255, 255 );
+            //Application.LoadLevel( "01.Title" );
         }
+    }
+
+    IEnumerator DeadProc( float fTime )
+    {
+        yield return new WaitForSeconds( fTime );
+        m_iDeadSoundIndex++;
+        if ( m_iDeadSoundIndex > 2 )
+        {
+            AutoFade.LoadLevel( "01.Title", 0.6f, 0.6f, Color.black );
+        }
+        m_AudioSource.PlayOneShot( m_DeadSounds[ m_iDeadSoundIndex ] );
+        StartCoroutine( DeadProc( m_DeadSounds[ m_iDeadSoundIndex ].length ) );
     }
 
     protected override void OnObjectTriggerEnter( Collider pCollider )
@@ -170,6 +227,26 @@ public class OVRPlayerController : objectBase
         if ( pCollider.transform.parent != null && pCollider.transform.parent.tag == "Opendoor" )
         {
             m_pPlayer.DoorProperty = pCollider.transform.parent.GetComponent<Door>();
+            m_pPlayer.canOpenDoor = true;
+        }
+        else if ( pCollider.transform.parent.tag == "Closedoor" )
+        {
+            m_pPlayer.DoorProperty = pCollider.transform.parent.GetComponent<Door>();
+            m_pPlayer.canOpenDoor = false;
+        }
+
+        if ( pCollider.transform.parent.tag == "LastDoor" )
+        {
+            if ( m_pPlayer.ItemCount == 2 )
+            {
+                m_pPlayer.DoorProperty = pCollider.transform.parent.GetComponent<Door>();
+                m_pPlayer.canOpenDoor = true;
+                m_isClear = true;
+            }
+            else
+            {
+                m_pPlayer.canOpenDoor = false;
+            }
         }
     }
 
@@ -177,7 +254,7 @@ public class OVRPlayerController : objectBase
     {
         base.OnObjectTriggerExit( pCollider );
 
-        if ( pCollider.transform.parent != null && pCollider.transform.parent.tag == "Opendoor" )
+        if ( pCollider.transform.parent != null && pCollider.transform.parent.tag == "Opendoor" || pCollider.transform.parent.tag == "CloseDoor" )
         {
             m_pPlayer.DoorProperty = null;
         }
@@ -193,6 +270,9 @@ public class OVRPlayerController : objectBase
         m_pPlayer = GetComponent<Player>();
 
         m_AudioSource = GetComponent<AudioSource>();
+        rtLockDoor.localScale = Vector3.zero;
+
+        m_DeadFade.color = new Color( 255, 255, 255, 0 );
     }
 
     protected override void OnAwake()
@@ -215,6 +295,8 @@ public class OVRPlayerController : objectBase
             CameraRig = CameraRigs[ 0 ];
 
         InitialYRotation = transform.rotation.eulerAngles.y;
+
+
     }
 
     void OnEnable()
@@ -240,6 +322,17 @@ public class OVRPlayerController : objectBase
     protected override void OnUpdate()
     {
         base.OnUpdate();
+
+        if ( m_isPlayerDead )
+            return;
+        if ( m_isClear )
+        {
+            m_DeadFade.color += new Color( 0, 0, 0, 0.6f * Time.deltaTime );
+            if ( m_DeadFade.color.a >= 1.0f )
+            {
+                Application.LoadLevel( "01.Title" );
+            }
+        }
         if ( useProfileData )
         {
             if ( InitialPose == null )
@@ -268,6 +361,7 @@ public class OVRPlayerController : objectBase
 
         UpdateMovement();
         m_pPlayer.Control();
+        LockUIProcess();
 
         float Speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
         ProgressStepCycle( Speed );
@@ -352,7 +446,7 @@ public class OVRPlayerController : objectBase
         // Run!
         if ( dpad_move || Input.GetKey( KeyCode.LeftShift ) || Input.GetKey( KeyCode.RightShift ) )
         {
-            moveInfluence *= 2.0f;
+            moveInfluence *= 3.5f;
         }
 
         m_IsWalking = !Input.GetKey( KeyCode.LeftShift );

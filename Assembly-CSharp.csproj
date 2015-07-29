@@ -79,7 +79,9 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
+     <Compile Include="Assets\Scripts\AutoFade.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\LookInputModule.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Monster\Monster_Item.cs" />
      <Compile Include="Assets\Scripts\Monster\Monster_Move.cs" />
@@ -89,6 +91,8 @@
      <Compile Include="Assets\Scripts\Non_VR_ver\Player\Player_Move.cs" />
      <Compile Include="Assets\Scripts\Non_VR_ver\objectBase.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\SetTextFromFloat.cs" />
+     <Compile Include="Assets\Scripts\TestEvents.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\Plugins\Android\assets\donotdelete.txt" />
      <None Include="Assets\Plugins\x86_64\donotdelete.txt" />

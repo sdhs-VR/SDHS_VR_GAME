@@ -11,10 +11,25 @@ public class Monster_Move : objectBase
 
     float m_fRandomMoveTime = 200.0f;
     int m_iRandomNum;
+
+    private AudioSource m_AudioSource;
+
+    private AudioClip ComingSound;
+
+    private bool PlayFlag = true;
+
     // Use this for initialization
     protected override void OnAwake()
     {
         Nav_Monster = GetComponent<NavMeshAgent>();
+
+        this.gameObject.AddComponent<AudioSource>();
+
+        m_AudioSource = GetComponent<AudioSource>();
+
+        ComingSound = ( AudioClip )Resources.Load( "Audio/z_ComingGhost", typeof( AudioClip ) );
+
+        m_AudioSource.clip = ComingSound;
     }
     // Update is called once per frame
     protected override void OnUpdate()
@@ -22,9 +37,16 @@ public class Monster_Move : objectBase
         if ( Vector3.Distance( transform.position, m_vTarget.position ) <= m_fRange )
         {
             Nav_Monster.SetDestination( m_vTarget.position );
+            if ( PlayFlag )
+            {
+                m_AudioSource.Play();
+                PlayFlag = !PlayFlag;
+            }
         }
         else
         {
+            m_AudioSource.Stop();
+            PlayFlag = true;
             m_fRandomMoveTime += Time.deltaTime;
             if ( m_fRandomMoveTime >= 35.0f )
             {

@@ -17,13 +17,15 @@ public class Door : objectBase
 
     private float m_fRotateSpeed = 5f;
 
+
+
     protected override void OnAwake()
     {
         base.OnAwake();
 
         tfTarget = transform.FindChild( "DoorPivot" );
 
-        if ( this.transform.rotation.y == 0 )
+        if ( this.transform.rotation.y == 0 || this.transform.rotation.eulerAngles.y == 180 )
         {
             isOpen = true;
         }
@@ -31,6 +33,8 @@ public class Door : objectBase
         {
             isOpen = false;
         }
+
+
     }
 
     protected override void OnUpdate()

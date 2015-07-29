@@ -651,6 +651,14 @@ MonoBehaviour:
   HmdRotatesY: 1
   GravityModifier: 1
   useProfileData: 1
+  m_IsWalking: 0
+  m_WalkSpeed: 0
+  m_RunSpeed: 0
+  m_RunstepLenghten: 0
+  m_GravityMultiplier: 0
+  m_StepInterval: 0
+  m_FootstepSounds: []
+  m_DeadSounds: []
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
